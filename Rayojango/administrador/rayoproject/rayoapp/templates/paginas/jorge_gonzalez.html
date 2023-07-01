@@ -1,0 +1,76 @@
+{% extends 'base.html' %} <!-- SE CARGA ARCHIVO BASE -->
+{% load static %} <!-- SE CARGA CARPETA STATIC -->
+{% block titulo %} Inicio {% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_mec.css' %}">
+{% endblock %}
+{% block contenido %}
+
+<!-- ************** -->
+<!-- DATOS MECANICO -->
+<!-- ************** -->
+
+<div class="container todo-text text-black">
+    <div class="titulo">
+        <h1>Jorge González</h1>
+        <hr>
+        <h3>Experto en Electrónica de Autos</h3>
+        <img class="w-50" src="{% static 'img/mecanico1.jpg' %}" alt="img_perfil">
+        <div class="datos">
+            <h4>Datos Personales:</h4><br>
+            <p>Nombre: Jorge González <br>
+                Área de especialización: Electrónica de Autos <br>
+                Estudios universitarios: Licenciatura en Ingeniería Electrónica, Universidad Nacional de Ingeniería (UNI) <br>
+                Años de experiencia: 15 años</p><br>
+        </div>
+    </div>
+    <div class="resumen">
+        <h4>Resumen profesional:</h4><br>
+        <p>Jorge González es un destacado experto en electrónica de autos con una amplia trayectoria en el campo automotriz. Posee una sólida
+            formación
+            académica y una gran experiencia práctica en el diseño, desarrollo y mantenimiento de sistemas electrónicos aplicados a vehículos.</p>
+        <br>
+
+        <h4>Educación:</h4><br>
+        <p>Licenciatura en Ingeniería Electrónica, Universidad Nacional de Ingeniería (UNI)
+            Durante sus estudios universitarios, Jorge González adquirió los conocimientos fundamentales en electrónica, sistemas digitales,
+            microcontroladores
+            y circuitos integrados, sentando las bases para su carrera en el ámbito automotriz.</p><br>
+
+        <h4>Experiencia profesional:</h4><br>
+        <p>Jorge González ha trabajado en importantes compañías automotrices, desempeñando funciones clave y liderando proyectos relacionados con
+            la
+            electrónica
+            de autos. Su experiencia incluye:</p><br>
+
+        <ul>
+            <li>Alto Técnico en desarrollo de sistemas electrónicos en XYZ Motors (2010-2014):</li>
+            <ul>
+                <li>Diseñó y desarrolló sistemas electrónicos para vehículos de última generación, incluyendo sistemas de control de motor,
+                    sistemas de
+                    seguridad y sistemas de infoentretenimiento.</li>
+                <li>Participó en el diseño de circuitos impresos y en la selección de componentes electrónicos de alto rendimiento.</li>
+                <li>Colaboró estrechamente con equipos multidisciplinarios, como ingenieros mecánicos y de software, para lograr soluciones
+                    integradas.</li><br>
+            </ul>
+            <li>Especialista en diagnóstico y reparación de sistemas electrónicos en ABC Automotive (2014-2018):</li>
+            <ul>
+                <li>Realizó diagnósticos precisos de fallas en sistemas electrónicos de vehículos, utilizando herramientas y equipos
+                    especializados.</li>
+                <li>Lideró equipos de trabajo en la reparación de sistemas electrónicos complejos, asegurando la calidad y eficiencia en el
+                    proceso.</li>
+                <li>Desarrolló estrategias de mantenimiento preventivo para optimizar el rendimiento y la confiabilidad de los sistemas
+                    electrónicos de los
+                    vehículos.</li><br>
+            </ul>
+            <li>Coordinador de Proyectos en Rayo Mc' Queen</li>
+            <ul class="separacion">
+                <li>Dirige proyectos de desarrollo de sistemas electrónicos para clientes automotrices de renombre.</li>
+                <li>Coordina equipos de ingenieros y supervisa el cumplimiento de los plazos, presupuestos y requisitos de calidad.</li>
+                <li>Trabaja en estrecha colaboración con los clientes para comprender sus necesidades y garantizar soluciones personalizadas.</li>
+            </ul>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

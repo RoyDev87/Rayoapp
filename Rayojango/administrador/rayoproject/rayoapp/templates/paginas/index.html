@@ -1,0 +1,88 @@
+{% extends 'base.html' %} <!-- SE CARGA ARCHIVO BASE -->
+{% load static %} <!-- SE CARGA CARPETA STATIC -->
+{% block titulo %} Inicio {% endblock %}
+{% block contenido %}
+
+<!-- ******** -->
+<!-- CARRUSEL -->
+<!-- ******** -->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active c-item" data-bs-interval="3000">
+            <img src="{% static 'img/foto1.jpg' %}" class="d-block w-100 c-img" alt="...">
+            <div class="carousel-caption d-none d-md-block tamaño-font">
+                <h4>Cajas de cambio</h4>
+                <p>Obtén el máximo rendimiento en la carretera con nuestra mecánica de cajas de cambio. Confía en nuestro equipo de expertos para
+                    un cambio
+                    de marcha sin problemas y una experiencia de conducción excepcional</p>
+                <a href="./Servicios.html" class="btn btn-primary bot-stl">Ver más</a>
+            </div>
+        </div>
+        <div class="carousel-item c-item" data-bs-interval="3000">
+            <img src="{% static 'img/foto2.jpg' %}" class="d-block w-100 c-img" alt="...">
+            <div class="carousel-caption d-none d-md-block tamaño-font">
+                <h4>Suspensión y Dirección</h4>
+                <p>Mecánica de primera para un rendimiento excepcional en la carretera. Confía en nosotros para obtener la mejor suspensión y
+                    dirección,
+                    garantizando una conducción suave y segura. Potencia tu viaje con nuestra experiencia mecánica completa</p>
+                <a href="./Servicios.html" class="btn btn-primary bot-stl">Ver más</a>
+            </div>
+        </div>
+        <div class="carousel-item c-item" data-bs-interval="3000">
+            <img src="{% static 'img/foto4.jpg' %}" class="d-block w-100 c-img #navbarSupportedContent" alt="...">
+            <div class="carousel-caption d-none d-md-block tamaño-font">
+                <h4>Electróncia</h4>
+                <p>Convierte tu vehículo en una máquina de precisión con nuestra experiencia en electrónica automotriz. Confía en nosotros para
+                    llevar tu
+                    conducción a un nivel superior con nuestra experiencia única en electrónica automotriz</p>
+                <a href="./Servicios.html" class="btn btn-primary bot-stl">Ver más</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- ********* -->
+<!-- MECANICOS -->
+<!-- ********* -->
+
+<!-- boton agregar -->
+
+
+<div class="container mt-5 mb-5" id="Mecanicos">
+    <div class="container d-flex justify-content-end">
+        <a href="{% url 'crear' %}" class="btn btn-success me-4">Agregar Mecanico</a>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-5 m-2">
+        {% for mecanico in mecanicos %}
+        <div class="col">
+            <div class="card card-mecanico">
+                <img src="{{ mecanico.imagen.url }}" class="card-img-top hv-100 img-card img-mecanico" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ mecanico.titulo}}</h5>
+                    <p class="card-text">{{ mecanico.descripcion }}</p>
+                    <a href="{% url 'jorge' %}" class="btn bot-stl bot-stl2">Más Información</a>
+                    <a name="" id="" href="{% url 'editar' mecanico.id %}" class="btn btn-info" role="button">Editar</a>
+                    |
+                    <a name="" id="" href="{% url 'eliminar' mecanico.id %}" class="btn btn-danger" role="button">Borrar</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

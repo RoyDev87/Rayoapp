@@ -1,0 +1,280 @@
+/* IMPORT DE FUENTES GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,900;1,400;1,900&family=Poly:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;900&display=swap');
+/* FONT FAMILY */
+/*
+    font-family: 'Overlock', cursive;
+    font-family: 'M PLUS Rounded 1c', sans-serif; 
+*/
+
+/*
+    Rojo:     #ff1a1a;
+    Blanco:   #EDF2F6;
+    Azul:     #3a83f0;
+    Gris:     #494953;
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body {
+    background: #dde2e6;
+}
+
+
+/**************** BARRA DE NAVEGACIÓN ***************/
+
+
+header {
+    background-color: #3a83f0;
+    height: auto;
+    text-align: center;
+}
+
+.margen {
+    margin-right: 5%;
+}
+
+.buscar-font {
+    font-family: 'M PLUS Rounded 1c', sans-serif !important;
+    font-weight: 300;
+    font-size: 18px;
+    max-height: 40px;
+    margin-top: 6px;
+
+}
+
+.nav-link {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    color: #ff1a1a;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+#Rayo {
+    font-family: 'Overlock', cursive;
+    font-weight: 900;
+    font-size: 30px;
+    color: #ffffff;
+    margin-left: 20px;
+    margin-bottom: 3px;
+}
+
+.ImgLogo {
+    margin-left: 5%;
+    width: 65px;
+    align-items: center;
+}
+
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.bot-stl {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 6px !important;
+    background-color: #ff1a1a;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.bot-stl:hover {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 3px #ff1a1a inset;
+    /*border: 3px solid #ff1a1a inset;*/
+    color: #ff1a1a;
+}
+
+.bot-stl:active {
+    background-color: #3a83f0 !important;
+    border: none;
+    box-shadow: none;
+    transition: 30ms;
+    color: #fff !important;
+}
+
+
+
+/*****************CARRUSEL********************/
+
+
+
+.carousel-indicators>button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 100%;
+}
+
+/********************* MEDIA QUERIES ***********************/
+
+
+@media (max-width:992px) {
+
+    .carousel-item {
+        height: 400px !important;
+        object-fit: cover;
+    }
+
+    header {
+        background-color: #3a83f0;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .titulo img {
+        height: 300px !important;
+        width: 300px !important;
+        object-fit: cover;
+        background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
+    }
+
+    .titulo hr {
+        width: 280px;
+        height: 2px;
+        margin: auto;
+        border: none;
+        border-radius: 2px;
+        background-color: #ff1a1a;
+        opacity: 100%;
+    }
+
+    .ImgLogo {
+        margin-left: 2%;
+        width: 45px;
+        align-items: center;
+    }
+
+    #Rayo {
+        display: none;
+    }
+}
+
+
+.c-item {
+    height: 500px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.btn {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.tamaño-font h4 {
+    font-weight: 700 !important;
+    font-size: 30px !important;
+}
+
+.tamaño-font p {
+    font-weight: 300 !important;
+    font-size: 22px !important;
+}
+
+
+
+
+/*****************TARJETAS MECANICOS********************/
+
+
+
+.img-card {
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(0.8);
+    border-bottom: 2px #ff1a1a !important;
+}
+
+.img-card {
+    border-radius: 5%;
+}
+
+.card-mecanico {
+    border-radius: 5%;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card-mecanico:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.bot-stl2 {
+    display: block;
+}
+
+
+
+/********************** BOTON VOLVER ARRIB ***********************/
+
+
+.boton {
+    width: 45px;
+    height: 45px;
+    background: #ff1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: all 350ms ease;
+}
+
+.boton:hover {
+    transform: scale(1.3);
+    border-color: rgba(105, 89, 89, 0.075);
+}
+
+
+
+/************************* FOOTER ***************************/
+
+
+
+.cen-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 150px;
+    background-color: #3a83f0;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18PX;
+    text-align: center;
+    padding-top: 12px;
+}
