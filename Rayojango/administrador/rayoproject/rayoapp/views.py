@@ -12,6 +12,7 @@ def mecanico(request):
     mecanicos = Mecanico.objects.all()
     return render(request, 'paginas/index.html', {'mecanicos': mecanicos})
 
+@login_required
 def crearmec(request):
     formulario = MecanicoForm(request.POST or None, request.FILES or None)
     if formulario.is_valid():
