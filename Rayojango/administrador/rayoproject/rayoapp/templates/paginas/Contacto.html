@@ -1,0 +1,53 @@
+{% extends 'base.html' %} <!-- SE CARGA ARCHIVO BASE -->
+{% load static %} <!-- SE CARGA CARPETA STATIC -->
+{% block titulo %} Contacto {% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_con.css' %}">
+{% endblock %}
+{% block extra_js %}
+<script src="{% static 'js/contacto.js' %}"></script>
+{% endblock %}
+{% block contenido %}
+
+<!-- FORMULARIO -->
+
+<form class="form" id="formulario" action="https://formspree.io/f/mleyejgd" method="POST">
+    <!-- <form class="form" id="formulario"> -->
+    <div class="contenedor_form">
+        <h2 class="form_titulo">Contáctanos</h2>
+        <label>
+            <b>* Nombre</b><br>
+            <input type="text" class="form_input" id="nombre" name="nombre">
+            <span></span>
+        </label>
+        <label>
+            <b>* Apellido </b>
+            <input type="text" class="form_input" id="apellido" name="apellido">
+            <span></span>
+        </label>
+        <label>
+            <b>* Email</b>
+            <input type="email" class="form_input" id="email" name="email">
+            <span></span>
+        </label>
+        <label>
+            <b>* Teléfono</b>
+            <input type="text" class="form_input" id="celular" name="celular">
+            <span></span>
+        </label>
+        <label>
+            <b>* Mensaje</b>
+            <textarea class="form_input form_input--message" id="mensaje" name="message"></textarea>
+            <span></span>
+        </label>
+        <input type="submit" value="Enviar" class="form_cta">
+        <p class="warnings" id="warnings"></p>
+
+        <label>
+            <b>(*) Campos Requeridos</b>
+            <span></span>
+        </label>
+
+    </div>
+</form>
+{% endblock %}

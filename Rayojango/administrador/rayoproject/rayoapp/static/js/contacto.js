@@ -1,12 +1,3 @@
-// $(document).ready(function () {
-//   $('#submit').on('click', function(e) {
-//     e.preventDefault();
-//     $('#myModal').modal('show');
-//   });
-  
-// });
-
-
 const userNameField = document.querySelector("[name=nombre]");
 const userLastnameField = document.querySelector("[name=apellido]");
 const userEmailField = document.querySelector("[name=email]");

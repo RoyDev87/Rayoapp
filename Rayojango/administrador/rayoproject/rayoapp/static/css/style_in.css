@@ -1,19 +1,6 @@
 /* IMPORT DE FUENTES GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,900;1,400;1,900&family=Poly:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;900&display=swap');
-/* FONT FAMILY */
-/*
-    font-family: 'Overlock', cursive;
-    font-family: 'M PLUS Rounded 1c', sans-serif; 
-*/
-
-/*
-    Rojo:     #ff1a1a;
-    Blanco:   #EDF2F6;
-    Azul:     #3a83f0;
-    Gris:     #494953;
-*/
-
 
 * {
     margin: 0;
@@ -52,7 +39,7 @@ header {
 .nav-link {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 18px;
     color: #ffffff;
     display: inline-block;
     border-radius: 5px;
@@ -201,7 +188,7 @@ header {
 
 
 .img-card {
-    height: 300px;
+    height: 300px !important;
     object-fit: cover;
     filter: brightness(0.8);
     border-bottom: 2px #ff1a1a !important;
@@ -257,24 +244,4 @@ header {
 .boton:hover {
     transform: scale(1.3);
     border-color: rgba(105, 89, 89, 0.075);
-}
-
-
-
-/************************* FOOTER ***************************/
-
-
-
-.cen-footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    height: 150px;
-    background-color: #3a83f0;
-    color: #fff;
-    font-weight: 300;
-    font-size: 18PX;
-    text-align: center;
-    padding-top: 12px;
 }

@@ -9,8 +9,7 @@
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
@@ -22,7 +21,6 @@
                 <p>Obtén el máximo rendimiento en la carretera con nuestra mecánica de cajas de cambio. Confía en nuestro equipo de expertos para
                     un cambio
                     de marcha sin problemas y una experiencia de conducción excepcional</p>
-                <a href="./Servicios.html" class="btn btn-primary bot-stl">Ver más</a>
             </div>
         </div>
         <div class="carousel-item c-item" data-bs-interval="3000">
@@ -32,7 +30,6 @@
                 <p>Mecánica de primera para un rendimiento excepcional en la carretera. Confía en nosotros para obtener la mejor suspensión y
                     dirección,
                     garantizando una conducción suave y segura. Potencia tu viaje con nuestra experiencia mecánica completa</p>
-                <a href="./Servicios.html" class="btn btn-primary bot-stl">Ver más</a>
             </div>
         </div>
         <div class="carousel-item c-item" data-bs-interval="3000">
@@ -42,7 +39,6 @@
                 <p>Convierte tu vehículo en una máquina de precisión con nuestra experiencia en electrónica automotriz. Confía en nosotros para
                     llevar tu
                     conducción a un nivel superior con nuestra experiencia única en electrónica automotriz</p>
-                <a href="./Servicios.html" class="btn btn-primary bot-stl">Ver más</a>
             </div>
         </div>
     </div>
@@ -65,24 +61,30 @@
 
 <div class="container mt-5 mb-5" id="Mecanicos">
     <div class="container d-flex justify-content-end">
+        {% if user.is_authenticated %}
         <a href="{% url 'crear' %}" class="btn btn-success me-4">Agregar Mecanico</a>
+        {% endif %}
     </div>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-5 m-2">
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-5 m-2">
         {% for mecanico in mecanicos %}
         <div class="col">
-            <div class="card card-mecanico">
+            <div class="card card-mecanico rounded-5">
                 <img src="{{ mecanico.imagen.url }}" class="card-img-top hv-100 img-card img-mecanico" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">{{ mecanico.titulo}}</h5>
+                    <h5 class="card-title">{{ mecanico.nombre }}</h5>
                     <p class="card-text">{{ mecanico.descripcion }}</p>
-                    <a href="{% url 'jorge' %}" class="btn bot-stl bot-stl2">Más Información</a>
+                    <a href="{% url 'detalle_mecanico' %}" class="btn bot-stl bot-stl2">Más Información</a>
+                    {% if user.is_authenticated %}
                     <a name="" id="" href="{% url 'editar' mecanico.id %}" class="btn btn-info" role="button">Editar</a>
                     |
                     <a name="" id="" href="{% url 'eliminar' mecanico.id %}" class="btn btn-danger" role="button">Borrar</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
+<br>
+
 {% endblock %}
