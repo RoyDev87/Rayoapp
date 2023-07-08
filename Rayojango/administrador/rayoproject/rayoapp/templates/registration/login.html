@@ -1,6 +1,9 @@
 {% extends 'base.html' %} <!-- SE CARGA ARCHIVO BASE -->
 {% load static %} <!-- SE CARGA CARPETA STATIC -->
 {% block titulo %} Login {% endblock %}
+{% block extra_js %}
+<script src="{% static 'js/contacto.js' %}"></script>
+{% endblock %}
 
 
 {% block contenido %}

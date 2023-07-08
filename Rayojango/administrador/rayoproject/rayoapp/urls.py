@@ -19,4 +19,4 @@ urlpatterns = [
     path('contacto/', views.contacto, name='contacto'),
     re_path(r'^accounts/login/.*$', LoginView.as_view(), name='login'),
 
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

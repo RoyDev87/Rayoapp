@@ -12,32 +12,33 @@
 <!-- FORMULARIO -->
 
 <form class="form" id="formulario" action="https://formspree.io/f/mleyejgd" method="POST">
+    {% csrf_token %}
     <!-- <form class="form" id="formulario"> -->
     <div class="contenedor_form">
         <h2 class="form_titulo">Contáctanos</h2>
         <label>
             <b>* Nombre</b><br>
-            <input type="text" class="form_input" id="nombre" name="nombre">
+            <input type="text" class="form_input" id="nombre" name="nombre" required>
             <span></span>
         </label>
         <label>
             <b>* Apellido </b>
-            <input type="text" class="form_input" id="apellido" name="apellido">
+            <input type="text" class="form_input" id="apellido" name="apellido" required>
             <span></span>
         </label>
         <label>
             <b>* Email</b>
-            <input type="email" class="form_input" id="email" name="email">
+            <input type="email" class="form_input" id="email" name="email" required>
             <span></span>
         </label>
         <label>
             <b>* Teléfono</b>
-            <input type="text" class="form_input" id="celular" name="celular">
+            <input type="text" class="form_input" id="celular" name="celular" required>
             <span></span>
         </label>
         <label>
             <b>* Mensaje</b>
-            <textarea class="form_input form_input--message" id="mensaje" name="message"></textarea>
+            <textarea class="form_input form_input--message" id="mensaje" name="message" required></textarea>
             <span></span>
         </label>
         <input type="submit" value="Enviar" class="form_cta">
